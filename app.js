@@ -16,7 +16,7 @@ console.log(' imooc started on port'+port)
 //index page
 app.get('/',function(req,res){
 	res.render('index',{
-		title: 'imooc 首页',
+		title: '爱奇艺 首页',
 		movies: [
 		{
 			title: '机械战警',
@@ -55,7 +55,7 @@ app.get('/',function(req,res){
 //detail page
 app.get('/movie/:id',function(req,res){
 	res.render('detail',{
-		title: 'imooc 详情页',
+		title: '影片 详情页',
 		movies: {
               doctor: "河道送啊都",
               country: "美国",
@@ -64,7 +64,7 @@ app.get('/movie/:id',function(req,res){
               poster: 'http://r3.ykimg.com/05160000530EEB63675839160D0B79D5',
               language: '英语',
               flash: 'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf',
-              summary: '是哦好萨松岙是大脑神经哦发i苏丹诺夫多少萨吉i哦发酒店送的金佛山的佛i还是短发好死的方式佛说的话佛山的是佛i还送饭还送饭后放好傻。'
+              summary: '是哦好萨松岙是大脑神经哦发i苏丹诺夫多少萨吉i哦发酒店送的金佛山的佛i还是短发好死的方式佛说的话佛山的是佛i还送饭还送饭后放好傻。是哦好萨松岙是大脑神经哦发i苏丹诺夫多少萨吉i哦发酒店送的金佛山的佛i还是短发好死的方式佛说的话佛山的是佛i还送饭还送饭后放好傻。'
 		}
 	})
 })
@@ -72,8 +72,16 @@ app.get('/movie/:id',function(req,res){
 //list page
 app.get('/admin/list',function(req,res){
 	res.render('list',{
-		title: 'imooc 列表页',
+		title: '爱奇艺视频 列表页',
 		movies: [{
+			title: '机械战警',
+			_id: 1,
+			doctor: "是靠谱河道送啊都",
+			country: "美国",
+			year: "2016",
+		language: '英语',
+            flash: 'http://player.youku.com/player.php/sid/XNjA1Njc0NTUy/v.swf'
+       },{
 			title: '机械战警',
 			_id: 1,
 			doctor: "是靠谱河道送啊都",
@@ -88,7 +96,7 @@ app.get('/admin/list',function(req,res){
 //admin page
 app.get('/admin/movie',function(req,res){
 	res.render('admin',{
-		title: 'imooc 后台录入页',
+		title: '爱奇艺视频 后台录入页',
 		movie :{
 			title: '',
 			doctor: '',
